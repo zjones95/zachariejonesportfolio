@@ -1,0 +1,37 @@
+.nav-container {
+    width: 100vw;
+    height: 50px;
+    box-shadow: 5px 5px 13px -1px rgba(0,0,0,0.2);
+}
+
+.nav-link-container {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.nav-link {
+    margin-left: 3%;
+    margin-right: 3%;
+    color: var(--oj);
+    font-weight: 100;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--lightoj);
+}
+
+.nav-link-left {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.nav-link-right {
+    margin-right: 0;
+}
+
