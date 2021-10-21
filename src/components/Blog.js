@@ -1,10 +1,12 @@
 import React from 'react'
 
+import './styles/Blog.css'
+
 function Blog() {
     return (
-        <div>
-            Blog!
-        </div>
+        <section className="blog">
+            <h2>Currently Under Construction</h2>
+        </section>
     )
 }
 

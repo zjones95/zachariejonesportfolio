@@ -1,0 +1,21 @@
+.contact {
+  margin-left: 5%;
+  margin-right: 5%;
+  height: calc(100vh - 79px);
+}
+
+.home-contact {
+  height: 95%;
+}
+
+.home-contact-form {
+  height: 550px;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .home-contact-form {
+    height: 400px;
+    padding-bottom: 20px;
+  }
+}
