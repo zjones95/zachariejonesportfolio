@@ -7,17 +7,34 @@ import HomeProjects from './HomeProjects'
 import HomeTechnologies from './HomeTechnologies'
 import HomeContact from './HomeContact'
 import './styles/Home.css'
+import { motion } from 'framer-motion'
+
+const pageTransitions = {
+    in: {
+      opacity: 1,
+    },
+    out: {
+      opacity: 0,
+    }
+}
 
 function Home() {
+
     return (
-        <div className="home-container root-container">
+        <motion.main 
+        exit="out" 
+        animate="in"
+        initial="out"
+        variants={pageTransitions}
+        className="home-container root-container"
+        >
             <HomeHero />
             <HomeBadges />
             <HomeAbout />
             <HomeProjects />
             <HomeTechnologies />
             <HomeContact />
-        </div>
+        </motion.main>
     )
 }
 

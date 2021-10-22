@@ -1,4 +1,5 @@
 .projects {
+  min-height: calc(100vh - 79px);
   margin-left: 15%;
   margin-right: 15%;
   padding-bottom: 5%;
@@ -35,17 +36,39 @@
 .project-text-container {
   padding-top: 10%;
   padding-bottom: 10%;
+  height: 100%;
   width: 100%;
   margin-top: 0;
   border-radius: 0 0 10px 10px;
   background: var(--project);
   box-shadow: 5px 5px 13px -1px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--darkbg);
+  border-top: 0;
+}
+
+.project-text {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.project-text h2 {
+  margin: 0;
+}
+
+.project-links {
+  margin-top: auto;
 }
 
 .project img {
   margin: 0;
   width: 100%;
   border-radius: 10px 10px 0 0;
+  border: 2px solid var(--darkbg);
+  border-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {

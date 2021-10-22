@@ -1,58 +1,48 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 
 import Project from './Project'
-
+import { QueryProjects, urlFor } from '../contexts/SanityQueries'
 import './styles/Projects.css'
+
+const pageTransitions = {
+    in: {
+      opacity: 1,
+    },
+    out: {
+      opacity: 0,
+    }
+}
 
 function Projects() {
 
-    const tempProjects = [
-        {
-            name: 'Project #1',
-            id: '1',
-            description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            link: 'https://google.com/',
-            repo: 'https://google.com/',
-            image: './test-image.jpg'
-        },
-        {
-            name: 'Project #2',
-            id: '2',
-            description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            link: 'https://google.com/',
-            repo: 'https://google.com/',
-            image: './test-image.jpg'
-        },
-        {
-            name: 'Project #3',
-            id: '3',
-            description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            link: 'https://google.com/',
-            repo: 'https://google.com/',
-            image: './test-image.jpg'
-        },
-        {
-            name: 'Project #4',
-            id: '3',
-            description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            link: 'https://google.com/',
-            repo: 'https://google.com/',
-            image: './test-image.jpg'
-        },
-    ]
+    const [projects, setProjects] = useState([])
+
+    useEffect(() => {
+        const handleProjectData = async() => {
+            QueryProjects(setProjects)
+        }
+        handleProjectData()
+    }, [])
 
     return (
-        <section className="projects">
+        <motion.section 
+        exit="out" 
+        animate="in"
+        initial="out"
+        variants={pageTransitions}
+        className="projects"
+        >
             <div className="projects-header">
                 <span className="section-span" />
                 <h2 className="section-header">Projects</h2>
             </div>
             <div className="projects-container">
-                {tempProjects.map((project) => {
-                    return <Project name={project.name} id={project.id} description={project.description} link={project.link} repo={project.repo} image={project.image} />
+                {projects && projects.sort((a, b) => a.order - b.order).map((project) => {
+                    return <Project name={project.name} id={project.order} key={project.order} description={project.body} link={project.link} repo={project.repo} image={urlFor(project.image.asset._ref).width(800).url()} />
                 })}
             </div>
-        </section>
+        </motion.section>
     )
 }
 
