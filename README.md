@@ -6,7 +6,7 @@ This is my portfolio website built using React, Framer Motion, and Sanity.io. I 
 
 ## Technologies Used
 
-*React
-*Framer Motion
-*EmailJS
-*Sanity.io
+* React
+* Framer Motion
+* EmailJS
+* Sanity.io
