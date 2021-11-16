@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 import './styles/Contact.css'
@@ -15,6 +15,10 @@ const pageTransitions = {
 }
 
 function Contact() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <motion.section 
         exit="out" 

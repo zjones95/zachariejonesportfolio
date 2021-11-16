@@ -19,6 +19,7 @@ function Projects() {
     const [projects, setProjects] = useState([])
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         const handleProjectData = async() => {
             QueryProjects(setProjects)
         }
