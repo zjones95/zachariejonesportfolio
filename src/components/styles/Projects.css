@@ -71,6 +71,15 @@
   border-bottom: 0;
 }
 
+.project-video {
+  width: 100% !important;
+  height: 100% !important;
+}
+.project-video video {
+  width: 100% !important;
+  height: 100% !important;
+}
+
 @media screen and (max-width: 768px) {
   .projects-container {
     flex-direction: column;
