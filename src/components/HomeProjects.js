@@ -33,9 +33,7 @@ function HomeProjects() {
                     </div>
             </div>
             {projects && projects.sort((a, b) => a.order - b.order).map((e, i) => {
-                if(i > 1) return
-
-                return <div className="home-project" key={e.order}>
+                if(i < 2) return <div className="home-project" key={e.order}>
                     <img className="home-project-img" src={urlFor(e.image.asset._ref).width(800).url()} alt={e.name} />
                     <div className="home-project-text-container">
                         <div className="home-project-text">
