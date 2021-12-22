@@ -48,6 +48,7 @@ function HomeProjects() {
                         </div>
                     </div>
                 </div>
+                return null
             })}
             <div className="home-projects-see-more">
                 <Link to="/projects">See More</Link>
