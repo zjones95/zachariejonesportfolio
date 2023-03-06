@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Footer() {
-    return (
-        <footer className="footer">
-            <p>Zacharie Jones © 2021 | zachariejones.com</p>
-        </footer>
-    )
+  return (
+    <footer className="footer">
+      <p>Zacharie Jones © 2023 | zachariejones.com</p>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
