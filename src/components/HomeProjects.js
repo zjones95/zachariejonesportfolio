@@ -26,8 +26,8 @@ function HomeProjects() {
                             <p>A hockey management application built for my hockey team after our old application was deprecated.</p>
                             <p>Technologies used were React, Firebase(Auth), Express(NodeJS), MongoDB, Context API, and Framer Motion</p>
                             <div className="home-project-links">
-                                <div className="home-project-link home-project-link-live"><a className="home-project-link-a-left" href="https://github.com/cutieboy/pucklist-client">Front End</a></div>
-                                <div className="home-project-link home-project-link-code"><a className="home-project-link-a-right" href="https://github.com/cutieboy/pucklist">Back End</a></div>
+                                <div className="home-project-link home-project-link-live"><a className="home-project-link-a-left" href="https://github.com/zjones95/pucklist-client">Front End</a></div>
+                                <div className="home-project-link home-project-link-code"><a className="home-project-link-a-right" href="https://github.com/zjones95/pucklist">Back End</a></div>
                             </div>
                         </div>
                     </div>
